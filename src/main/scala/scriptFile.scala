@@ -1,1 +1,1 @@
-  val finalCount = wordMap.reduceByKey((a,b)=>a+b)
+  //val finalCount = wordMap.reduceByKey((a,b)=>a+b)
