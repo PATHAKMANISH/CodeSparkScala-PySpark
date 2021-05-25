@@ -5,13 +5,13 @@ import org.apache.log4j.Logger
 
 object WordCount extends App {
 
-  Logger.getLogger("org").setLevel(Level.ERROR)
+  //Logger.getLogger("org").setLevel(Level.ERROR)
 
 
-  //val sc = new SparkContext("local[*]","WordCount")  //-- this is for local run
-  val sc = new SparkContext()
-  //val input = sc.textFile("C:\\ScalaSpark\\SparkScalaPractice\\src\\main\\resources\\search_data.txt")
-  val input = sc.textFile("s3n://trendytech-manish/book-data.txt")
+  val sc = new SparkContext("local[*]","WordCount11")  //-- this is for local run
+  //val sc = new SparkContext()
+  val input = sc.textFile("C:\\ScalaSpark\\SparkScalaPractice\\src\\main\\resources\\search_data.txt")
+  //val input = sc.textFile("s3n://trendytech-manish/book-data.txt")
   val words = input.flatMap(x=>x.split(" "))
   val wordMap = words.map(x=>(x,1))
   val finalCount = wordMap.reduceByKey((a,b)=>a+b)

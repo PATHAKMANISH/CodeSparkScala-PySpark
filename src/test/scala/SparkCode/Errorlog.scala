@@ -8,5 +8,5 @@ object Errorlog  extends App {
 
   Logger.getLogger("org").setLevel(Level.ERROR)
   val sc = new SparkContext ("local[*]", "wordcount2")
-  
+
 }
