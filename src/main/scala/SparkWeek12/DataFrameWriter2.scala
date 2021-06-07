@@ -31,7 +31,10 @@ val spark = SparkSession.builder()
     .format("csv")
     // by default format is parquet format
     .mode(saveMode = "overwrite")
-    .option("path","src/main/resources/newResult2")
+    .partitionBy("order_status")
+    .option("maxRecordPerFile",2000)
+    //.option("path","src/main/resources/newResult2")
+    .option("path","src/main/resources/newResult3")
     .save()
 
 
