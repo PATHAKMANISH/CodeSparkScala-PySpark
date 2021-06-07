@@ -15,6 +15,8 @@ object DataFrameWriter extends App {
     .option("header",true)
     .option("inferSchema",true)
     .csv("src/main/resources/orders.csv")
+
+
 /*
   ordersDf.show(30)
   ordersDf.printSchema()
