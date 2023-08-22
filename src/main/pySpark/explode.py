@@ -22,15 +22,15 @@ df2 = df.withColumn("City",
                     )
 df2.show()
 
-df3 = df.withColumn("City",
-                    f.explode_outer(f.split(f.col('Address'), ','))
-                    )
-df3.drop('Address').show()
+df3 = df.withColumn("City",f.explode_outer(f.split(f.col('Address'), ','))).drop('Address').show()
+
 
 # pos_explode - doesnot work with withColumn so try with select
+df4 = df.select("*",f.posexplode_outer(f.split(f.col('Address'), ','))).show()
 
-df4 = df3.select("*",f.posexplode_outer(f.split(f.col('Address'),',')))
-df4.show()
+df5 = df.select("*",f.posexplode_outer(f.split(f.col('Address'), ','))).drop('Address')
+df5.show()
+df5.withColumnRenamed('col','city').show()
 
-df5 = df4.drop('Address').withColumnRenamed('col','city').show()
+
 
