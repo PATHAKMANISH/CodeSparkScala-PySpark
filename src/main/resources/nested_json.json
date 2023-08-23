@@ -1,0 +1,21 @@
+{
+  "name": "Manish Kumar",
+  "age": 34,
+  "email": "manishpathak@gmail.com",
+  "address": {
+              "street": "Kubera Sankul Riddhi",
+              "city": "Pune",
+              "Zipcode":"411028"
+
+             },
+  "phone": [
+    {
+      "type": "home",
+      "number": "1234-4444"
+    },
+    {
+      "type": "work",
+      "number": "5555-4444"
+    }
+           ]
+}
