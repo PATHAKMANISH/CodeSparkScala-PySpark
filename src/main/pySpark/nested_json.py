@@ -25,6 +25,8 @@ df2 = df1.select("address.city","address.street","address.zipcode","name","age",
 df2.printSchema()
 df2.show(truncate=False)
 
+#### SECOND WAY
+
 df3 = df1.select("address.*","name","age","email",
                  "phone.*")
 df3.printSchema()
