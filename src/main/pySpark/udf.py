@@ -21,9 +21,10 @@ df2.show(truncate=False)
 
 # second approach - decorator
 @udf(returnType=StringType())
-def uppercase(str):    # this function is a plain python function which will take one tring at a time but since we have registered it as udf decorator we can run on each row of dataframe
+def uppercase(str):    # this function is a plain python function which will take one tring at a time
+                       # but since we have registered it as udf decorator we can run on each row of dataframe
 
-    return str.upper()
+ return str.upper()
 df2.select('*',uppercase(col('Name')).alias('UpperCase Name')).show()
 
 # 2 ways to add new column is using with column and second one is using select clause
