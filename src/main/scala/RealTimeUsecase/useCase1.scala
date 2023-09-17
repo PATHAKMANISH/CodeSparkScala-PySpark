@@ -1,7 +1,10 @@
 package Usecase
+import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 
 object useCase1 extends App {
+
+  Logger.getLogger("org").setLevel(Level.ERROR)
 
   val spark = SparkSession.builder()
     .appName("Application 1")
