@@ -27,6 +27,10 @@ object filterData extends App{
   filterDF.filter(col("name").isin(reqList: _*) || col("runs") > 20)
     .show(false)
 
-
+//  Note: Just in
+//  case we had a list and we did not want any of it to be in the output
+//  , then we can use below:
+  filterDF.filter(!col("name").isin(reqList: _*)).show(false)
+// will get all the player details other than those mentioned in reqList
 
 }
