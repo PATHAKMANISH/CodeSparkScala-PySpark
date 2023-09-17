@@ -22,7 +22,7 @@ import spark.implicits._
     .format("csv")
     .option("header", "true")
     .option("inferSchema", "true")
-    .option("path", "src/main/resources/order_data.csv")
+    .option("path", "src/main/resources/customer_data.csv")
     .load()
 
 

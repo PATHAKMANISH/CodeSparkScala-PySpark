@@ -1,0 +1,10 @@
+customer_id,customer_fname,customer_lname,customer_email,customer_password
+1,Manish,Kumar,manish@gmail.com,abc
+2,Mohan,Kumar,mohan@gmail.com,edf
+3,Sohan,Kumar,sohan@gmail.com,aaa
+4,Manu,Kumar,manu@gmail.com,ddd
+5,Sunny,Kumar,Sunny@gmail.com,rrr
+6,Rahul,Kumar,rahul@gmail.com,ggg
+7,Rajesh,Kumar,rajesh@gmail.com,zzz
+8,Rohan,Kumar,rohan@gmail.com,kkk
+10,Mahesh,Kumar,mahesh@gmail.com,lll
