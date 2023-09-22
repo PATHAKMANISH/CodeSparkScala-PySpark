@@ -42,6 +42,8 @@ object nullValues extends App {
 //    .na.fill(-1)
 //    .show()
 
+  val dfDropNull =  nullDF.na.drop(Seq("player"))
+  dfDropNull.show(false)
 }
 
 
