@@ -25,7 +25,7 @@ df_res1.show()
 df_res2 = null_Row_DF.select([count(col(i).isNull()) for i in null_Row_DF.columns])
 df_res2.show()
 
-df_res3 = null_Row_DF.select([count(when(col(i).isNull()).alias(i)) for i in null_Row_DF.columns])
+df_res3 = null_Row_DF.select([count(when(col(i).isNull(),i)).alias(i) for i in null_Row_DF.columns])
 df_res3.show()
 
 
