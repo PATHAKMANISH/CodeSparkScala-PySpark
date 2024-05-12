@@ -1,9 +1,12 @@
 package SparkWeek10
 
+import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkContext
 
 
 object pairRdd extends App {
+
+  Logger.getLogger("org").setLevel(Level.ERROR)
 
   val sc = new SparkContext("local[*]","TotalSpent")  //-- this is for local run
 

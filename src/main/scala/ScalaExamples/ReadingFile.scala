@@ -10,4 +10,7 @@ object ReadingFile extends App {
 
   val ScalaFileContents: Iterator[String] = Source.fromFile(file).getLines()
   ScalaFileContents.foreach(println)
+
+
+
 }

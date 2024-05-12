@@ -14,3 +14,5 @@ data = [
 columns = ["name","state","gender"]
 df = spark.createDataFrame(data,columns)
 df.show()
+
+
